@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chats",
+  "info": {
+    "name": "Chat",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "roomid": {
+      "type": "string",
+      "unique": true
+    },
+    "message": {
+      "type": "richtext"
+    }
+  }
+}

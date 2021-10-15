@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications",
+  "info": {
+    "name": "Publications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "materialType": {
+      "type": "enumeration",
+      "enum": [
+        "paperBoard",
+        "paper",
+        "plastic",
+        "glass"
+      ],
+      "required": true
+    },
+    "prodImage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "quantity": {
+      "type": "string"
+    },
+    "frecuency": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "cityLoc": {
+      "type": "string"
+    },
+    "deptLoc": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
